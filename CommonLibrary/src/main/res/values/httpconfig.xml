@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- okHttp默认请求头配置，key和value用逗号隔开 -->
+    <string-array name="headers">
+        <item>User-Agent,cl</item>
+        <item>Platform,android</item>
+    </string-array>
+
+    <!-- okHttp请求体配置，key和value用逗号隔开 -->
+    <string-array name="formBody">
+    </string-array>
+
+</resources>
