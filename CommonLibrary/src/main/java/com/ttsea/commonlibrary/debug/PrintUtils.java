@@ -34,9 +34,6 @@ final public class PrintUtils {
      * @param fileName 保存的文件名
      */
     public static void saveStringForTest(Context context, String content, String dir, String fileName) {
-        if (!Config.DEBUG) {
-            return;
-        }
         JLog.d(TAG, "Start save content...");
         String filePath = dir + "/" + fileName;
         try {
@@ -65,9 +62,6 @@ final public class PrintUtils {
      * @param desDirPath  要拷贝到的目录
      */
     public static void copyFile(String scrFilePath, String desDirPath) {
-        if (!Config.DEBUG) {
-            return;
-        }
         File srcFile = new File(scrFilePath);
         File desDir = new File(desDirPath);
         InputStream fis = null;
@@ -124,10 +118,6 @@ final public class PrintUtils {
     }
 
     public static void printCursor(Cursor c) {
-        if (!Config.DEBUG) {
-            return;
-        }
-
         JLog.d(TAG, "cursorCount:" + c.getCount());
         StringBuilder builder = new StringBuilder("[");
         for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()) {
@@ -143,9 +133,6 @@ final public class PrintUtils {
     }
 
     public static void printStringArray(String[] array) {
-        if (!Config.DEBUG) {
-            return;
-        }
         JLog.d(TAG, "array length:" + array.length);
         StringBuilder builder = new StringBuilder("[");
         for (int i = 0; i < array.length; i++) {

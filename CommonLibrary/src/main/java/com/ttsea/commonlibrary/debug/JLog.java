@@ -2,6 +2,8 @@ package com.ttsea.commonlibrary.debug;
 
 import android.util.Log;
 
+import com.ttsea.commonlibrary.BuildConfig;
+
 /**
  * 用来打印想要输出的数据，默认为false，将DEBUG设为false后会根据{@link #LOG_TAG}来输错日志 <br>
  * 从高到低为ASSERT, ERROR, WARN, INFO, DEBUG, VERBOSE<br>
@@ -19,7 +21,7 @@ final public class JLog {
     /** 定义单条打印msg的最大长度，超出此范围则分段打印 */
     private static final int MAX_LENGTH = 3500;
 
-    private static boolean DEBUG = Config.DEBUG;
+    private static boolean DEBUG = BuildConfig.DEBUG;
     /**
      * 输出日志等级，当DEBUG为false的时候会根据设置的等级来输出日志<br>
      * 从高到低为ASSERT, ERROR, WARN, INFO, DEBUG, VERBOSE<br>

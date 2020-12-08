@@ -1,6 +1,8 @@
 package com.ttsea.commonlibrary.utils;
 
 import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 
 import com.ttsea.commonlibrary.debug.JLog;
 
@@ -16,6 +18,25 @@ import com.ttsea.commonlibrary.debug.JLog;
  */
 final public class AppInformationUtils {
     private static final String TAG = "Utils.AppInformationUtils";
+
+    /**
+     * 获取应用程序名称
+     *
+     * @return 应用程序名称
+     */
+    public static synchronized String getAppName(Context context) {
+        try {
+            PackageManager packageManager = context.getPackageManager();
+            PackageInfo packageInfo = packageManager.getPackageInfo(context.getPackageName(), 0);
+            int labelRes = packageInfo.applicationInfo.labelRes;
+
+            return context.getResources().getString(labelRes);
+
+        } catch (Exception e) {
+            JLog.e("Exception e:" + e.getMessage());
+        }
+        return null;
+    }
 
     /**
      * 得到应用程序的包名

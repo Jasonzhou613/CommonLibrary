@@ -1,9 +1,10 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: 'libversion.gradle'
 
 buildscript {
     repositories {
         // google()
-//        jcenter()
+        // jcenter()
 
         maven {
             url = "https://maven.aliyun.com/repository/public"
@@ -24,7 +25,7 @@ buildscript {
 allprojects {
     repositories {
         // google()
-//         jcenter()
+        //   jcenter()
 
         maven {
             url = "https://maven.aliyun.com/repository/public"

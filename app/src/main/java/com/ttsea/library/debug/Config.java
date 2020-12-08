@@ -1,4 +1,4 @@
-package com.ttsea.commonlibrary.debug;
+package com.ttsea.library.debug;
 
 /**
  * 调试配置类 <br>
